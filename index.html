@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV AGHUNG</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="neon-box">
+            <div class="profile-photo">
+                <img src="poto.jpeg" alt="Foto Profil">
+            </div>
+            <div class="header-text">
+                <h1 id="typing-text"></h1>
+                <p class="subtitle">12 | DESIGN GRAPHIC</p>
+            </div>
+        </header>
+
+        <main>
+            <section class="card hidden">
+                <h2>01. PROFILE</h2>
+                <p>
+                    Seorang pelajar SMK Grafika Desa Putera Jurusan Desain Grafika. Seorang pejuang kreatif yang memiliki minat besar dalam dunia desain grafis dan seni visual. 
+                </p>
+            </section>
+
+            <section class="card hidden">
+                <h2>02. EDUCATION
+                </h2>
+                <div class="timeline">
+                    <div class="job">
+                        <h3>Madrasah Ibtidahiyah Nurul Iman</h3>
+                        <span class="date">2013 - 2019</span>
+                    <div class="job">
+                        <h3>SMP Negeri 242 Jakarta</h3>
+                        <span class="date">2019 - 2023</span>
+                    <div class="job">
+                        <h3>SMK Grafika Desa Putera</h3>
+                        <span class="date">2023 - 2026</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card hidden">
+                <h2>03. EXPERIENCE</h2>
+                <div class="timeline">
+                    <div class="class">
+                        <h3>PT. Bintang Sempurna</h3>
+                        <span class="date">5 Bulan</span>
+                        <p>Praktek Kerja Lapangan di perusahaan PT. Bintang Sempurna, dengan bekerja di berbagai divisi, seperti divisi Flatbed, Indigo, Indoor, Quality Control 'QC', CTP, dan Cutting</p>
+                    </div>
+                    <div class="job">
+                        <h3>Design Identity</h3>
+                        <span class="date">Projek</span>
+                        <p>Pembuatan logo dan kemasan untuk produk usaha rumahan yaitu roti, dengan beberapa item tambahan seperti Paper Slevee dan pin</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card hidden">
+                <h2>03. SKILLS</h2>
+                <ul class="skill-list">
+                    <li>Adobe Photoshop</li>
+                    <li>Adobe Ilustrator</li>
+                    <li>Logo Maker</li>
+                    <li>Sablon Design</li>
+                    <li>Packaging Maker</li>
+                </ul>
+            </section>
+
+            <section class="card hidden" style="text-align: center;">
+                <h2>04. CONTACT</h2>
+                <a href="#" class="neon-button" id="wa-btn">WHATSAPP</a>
+                <a href="#" class="neon-button" id="ig-btn" style="margin-left:12px;">INSTAGRAM</a>
+            </section>
+
+            <!-- WhatsApp modal (tetap) -->
+            <div id="contact-modal-wa" class="modal-overlay" aria-hidden="true">
+              <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contact-title-wa">
+                <div class="modal-header">
+                  <h3 id="contact-title-wa">Hubungi via WhatsApp</h3>
+                  <button class="modal-close" id="contact-close-wa" type="button">Tutup</button>
+                </div>
+                <div class="modal-body">
+                  <div class="contact-field"> <strong id="wa-target">+62 852-8900-5144</strong></div>
+                  <label class="contact-field">Nama
+                    <input id="wa-input-name" type="text" placeholder="Yang bener cuy" required>
+                  </label>
+                  <label class="contact-field">Pesan
+                    <textarea id="wa-input-message" rows="4" placeholder="Mau ngomong ape lau..." required></textarea>
+                  </label>
+                  <div style="margin-top:12px; text-align:right;">
+                    <button class="neon-button" id="wa-send" type="button">Kirim</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Instagram modal -->
+            <div id="contact-modal-ig" class="modal-overlay" aria-hidden="true">
+              <div class="modal" role="dialog" aria-modal="true" aria-labelledby="contact-title-ig">
+                <div class="modal-header">
+                  <h3 id="contact-title-ig">Hubungi via Instagram</h3>
+                  <button class="modal-close" id="contact-close-ig" type="button">Tutup</button>
+                </div>
+                <div class="modal-body">
+                  <div class="contact-field"><strong id="ig-target">@utagng</strong></div>
+                  <label class="contact-field">Nama
+                    <input id="ig-input-name" type="text" placeholder="Yang bener cuy" required>
+                  </label>
+                  <label class="contact-field">Pesan 
+                    <textarea id="ig-input-message" rows="4" placeholder="Mau ngomong ape lau..." required></textarea>
+                  </label>
+                  <div style="margin-top:12px; text-align:right;">
+                    <button class="neon-button" id="ig-send" type="button">Buka</button>
+                  </div>
+                  <p style="margin-top:10px; font-size:0.9rem; color:#ccc;">
+                    
+                  </p>
+                </div>
+              </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>INFORMATIKA UKK // 2026</p>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script>
+  (function(){ emailjs.init('YOUR_PUBLIC_KEY'); })();
+</script>
+<script src="script.js"></script>
+</body>
+</html>

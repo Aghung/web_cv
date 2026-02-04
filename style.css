@@ -1,0 +1,276 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace; /* Monospace untuk kesan teknikal */
+}
+
+:root {
+    --bg-color: #050505;
+    --text-color: #e0e0e0;
+    --neon-red: #ff003c;
+    --neon-dim: #990024;
+    --glass: rgba(20, 20, 20, 0.8);
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    text-align: center; /* tetap rapi pada layar kecil */
+    margin-bottom: 3rem;
+    padding: 2rem;
+    border: 1px solid var(--neon-red);
+    box-shadow: 0 0 10px var(--neon-red), inset 0 0 10px var(--neon-dim);
+    position: relative;
+}
+
+h1 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 5px var(--neon-red);
+    min-height: 3rem;
+}
+
+.subtitle {
+    font-size: 0.9rem;
+    color: var(--neon-red);
+    letter-spacing: 2px;
+    margin-top: 10px;
+}
+
+/* Kotak foto profil */
+.profile-photo {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(135deg, rgba(255,0,60,0.08), rgba(153,0,36,0.06));
+    border: 2px solid var(--neon-red);
+    box-shadow: 0 0 10px var(--neon-red), inset 0 0 6px var(--neon-dim);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 8px; /* kotak dengan sudut lembut */
+}
+
+/* Gambar di dalam kotak */
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Sections & Cards */
+.card {
+    background: var(--glass);
+    border-left: 3px solid var(--neon-red);
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0; /* Untuk animasi JS */
+    transform: translateY(20px);
+}
+
+.card:hover {
+    transform: translateX(10px);
+    box-shadow: -5px 0 15px var(--neon-dim);
+}
+
+h2 {
+    color: var(--neon-red);
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 3px var(--neon-red);
+}
+
+/* Timeline/Experience */
+.job {
+    margin-bottom: 1.5rem;
+}
+
+.job h3 {
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.date {
+    font-size: 0.8rem;
+    color: #888;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Skills */
+.skill-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    list-style: none;
+}
+
+.skill-list li {
+    border: 1px solid var(--neon-red);
+    padding: 5px 10px;
+    font-size: 0.9rem;
+    box-shadow: 0 0 5px var(--neon-dim);
+    transition: 0.3s;
+}
+
+.skill-list li:hover {
+    background: var(--neon-red);
+    color: #000;
+    cursor: default;
+}
+
+/* Button */
+.neon-button {
+    display: inline-block;
+    padding: 10px 30px;
+    color: var(--neon-red);
+    border: 1px solid var(--neon-red);
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 1rem;
+    transition: 0.3s;
+    box-shadow: 0 0 5px var(--neon-red);
+}
+
+.neon-button:hover {
+    background: var(--neon-red);
+    color: #000;
+    box-shadow: 0 0 20px var(--neon-red);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-size: 0.7rem;
+    color: #444;
+    border-top: 1px solid #222;
+    padding-top: 1rem;
+}
+
+/* Animation Class */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contact modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    padding: 1rem;
+}
+
+.modal-overlay.visible {
+    display: flex;
+}
+
+.modal {
+    background: linear-gradient(180deg, rgba(20,20,20,0.95), rgba(10,10,10,0.95));
+    border: 1px solid var(--neon-red);
+    padding: 1.25rem;
+    width: 360px;
+    max-width: 100%;
+    box-shadow: 0 0 20px var(--neon-red);
+    border-radius: 8px;
+    color: var(--text-color);
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.modal-close {
+    background: transparent;
+    border: 1px solid var(--neon-red);
+    color: var(--neon-red);
+    padding: 6px 10px;
+    cursor: pointer;
+    border-radius: 6px;
+}
+
+.modal-body p {
+    margin-top: 0.5rem;
+    font-size: 0.95rem;
+    color: #ddd;
+}
+
+/* gaya untuk input form modal */
+.modal-body input,
+.modal-body textarea {
+    width: 100%;
+    margin-top: 6px;
+    padding: 8px 10px;
+    background: rgba(0,0,0,0.6);
+    border: 1px solid #333;
+    color: var(--text-color);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.4);
+}
+
+.modal-body input:focus,
+.modal-body textarea:focus {
+    border-color: var(--neon-red);
+    box-shadow: 0 0 8px rgba(255,0,60,0.15);
+}
+
+/* kecilkan label contact-field default agar tetap rapi */
+.contact-field {
+    display: block;
+    margin-top: 0.75rem;
+    font-weight: 700;
+    color: var(--neon-red);
+    font-size: 0.9rem;
+}
+
+/* Responsif: tumpuk elemen di layar kecil */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        padding: 1.5rem;
+    }
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        margin-bottom: 0.75rem;
+    }
+}
+
+/* Responsif modal */
+@media (max-width: 420px) {
+    .modal { width: 320px; padding: 1rem; }
+}
